@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "uuid": "5bc98651-e8b6-42c1-a8d0-3dbb83b294dc",
+      "username": "chris",
+      "password": "$2b$10$Xa1KbEKzruVEBptYDxcwSO7sUJVXmNJ2JuVOvFmHnnkqBdgNxDQQa",
+      "role": "user"
+    },
+    {
+      "uuid": "b5e50566-dba1-4a13-882c-52703b1d61dd",
+      "username": "chris",
+      "password": "$2b$10$ai/Sd39ieQpTCvgl9A3Z4eF8olltAFP6tEPhmU7uB6ox1cCYSls0S",
+      "role": "user"
+    },
+    {
+      "uuid": "01d0bae5-91b8-4b08-bc07-1a317ef320d2",
+      "username": "ada",
+      "password": "$2b$10$WiRJWuVgPg4EJOZtt1JZMurmdmABHbmeQTsP4.Ic5NWZQqD/BB9wu",
+      "role": "user"
+    },
+    {
+      "uuid": "071041f1-c3e7-49b9-8394-fbd7b45080ba",
+      "username": "chris",
+      "password": "$2b$10$ty4FeiAwiDUYCIpGiCCHD.mzkypPO1wAV6zbPk3alnuc62xa878DW",
+      "role": "user"
+    },
+    {
+      "uuid": "42d32977-c0d3-41a0-9d06-0bea5e457705",
+      "username": "ada",
+      "password": "$2b$10$14IVOE1y7ohv9khwPqsOu.m1WB5Y8gtfYZepdoB9gA5QmLrBf/Xq2",
+      "role": "user"
+    },
+    {
+      "uuid": "768276b2-a396-420b-9f23-9d8e6474af79",
+      "username": "alice",
+      "password": "$2b$10$78RjVD7aTnvKIkiIACcuS.tweUYuFUuZqy92fwtPRLJ3JoigdostG",
+      "role": "user"
+    }
+  ]
+}
