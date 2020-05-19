@@ -7,13 +7,17 @@ module.exports = {
         //Annars neka åtkomst och returnera fel på requesten
         try {
             const token = req.header('Authorization').replace('Bearer ', '');
+            console.log('TOKEN: ', token);
             const data = jwt.verify(token, 'a1b1c1');
+            console.log('----------------------');
             console.log('Data from jwt.verify ', data);
             const user = await getUser(data);
+            console.log('----------------------');
             console.log('User from database: ', user);
             
             req.user = user;
-
+            console.log('----------------------');
+            console.log('Before next function');
             next(); //Säger att express kan gå vidare till nästa parameter i endpoint:en
         } catch (error) {
             res.status(401).send(JSON.stringify({ success: false, error: 'Token not valid' }));

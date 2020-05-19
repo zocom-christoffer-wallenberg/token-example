@@ -35,6 +35,12 @@
       "username": "alice",
       "password": "$2b$10$78RjVD7aTnvKIkiIACcuS.tweUYuFUuZqy92fwtPRLJ3JoigdostG",
       "role": "user"
+    },
+    {
+      "uuid": "e9caba0e-1931-4b59-a52f-ac4b5aa77b34",
+      "username": "chris",
+      "password": "$2b$10$x1Gwdo4cM2jeWH7XA0Puw.vzconYEACGkCIWjZsJNyIW5pI.PWA7m",
+      "role": "user"
     }
   ]
 }

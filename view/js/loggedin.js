@@ -21,15 +21,9 @@ async function isLoggedIn() {
     }
 }
 
-async function logout() {
-    const url = 'http://localhost:8000/api/auth/logout';
-
-    const response = await fetch(url, { method: 'GET' });
-    const data = await response.json();
-
-    if (data.success) {
-        location.href = '/';
-    }
+function logout() {
+    sessionStorage.removeItem('auth');
+    location.href = '/';
 }
 
 buttonElem.addEventListener('click', () => {

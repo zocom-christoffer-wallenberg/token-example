@@ -5,6 +5,8 @@ const { user, admin } = require('../middleware/auth');
 
 //Vi får i req-objektet användaren från databasen som vi kan skicka tillbaka till klienten
 router.get('/get', user, (req, res) => {
+    console.log('----------------------');
+    console.log('After middleware');
     console.log(req.user);
     let resObj = {
         user: req.user.username,

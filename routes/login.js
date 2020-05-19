@@ -47,13 +47,4 @@ router.get('/isloggedin', async (req, res) => {
     res.send(JSON.stringify(resObj));
 });
 
-router.get('/logout', (req, res) => {
-    let resObj = {
-        success: true
-    }
-
-    res.clearCookie('loggedIn');
-    res.send(JSON.stringify(resObj));
-});
-
 module.exports = router;
