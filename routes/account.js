@@ -1,24 +1,29 @@
 const { Router } = require('express');
 const router = new Router();
 
-const { getUserInfo } = require('../models/database-functions');
+const { user, admin } = require('../middleware/auth');
 
-router.get('/get', async (req, res) => {
-    let cookies = req.cookies;
-
-    const user = await getUserInfo(cookies);
-
+//Vi får i req-objektet användaren från databasen som vi kan skicka tillbaka till klienten
+router.get('/get', user, (req, res) => {
+    console.log(req.user);
     let resObj = {
-        success: false
-    }
-
-    if (user) {
-        resObj.user = user.username;
-        resObj.role = user.role;
-        resObj.success = true;
+        user: req.user.username,
+        role: req.user.role,
+        success: true
     }
 
     res.send(JSON.stringify(resObj));
+});
+
+
+//En enpoint som bara kan nås av användare med adminroll
+
+router.get('/admin', admin, (req, res) => {
+    res.send(JSON.stringify({ success: true, message: 'Is admin' }));
+});
+
+router.get('/test', admin, (req, res) => {
+    res.send(JSON.stringify({ success: true, message: 'Is admin' }));
 });
 
 module.exports = router;

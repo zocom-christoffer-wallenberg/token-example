@@ -5,7 +5,6 @@ const router = new Router();
 
 const { addUser } = require('../models/database-functions');
 const { hashPassword } = require('../models/hashPassword');
-const { addCookie } = require('../models/cookies');
 
 /*
     1. Ta emot användarnamn och lösenord i body

@@ -6,19 +6,11 @@ const database = low(adapter)
 
 module.exports = {
     async getUser(user) {
+        return await database.get('users').find({ uuid: user.uuid }).value();
+    },
+
+    async getUserFromUsername(user) {
         return await database.get('users').find({ username: user.username }).value();
-    },
-    
-    async getUserInfo(cookie) {
-        return await database.get('users').find({ cookieID: cookie.loggedIn }).value();
-    },
-    
-    async addCookieID(user, id) {
-        return await database.get('users').find({ username: user.username }).assign({ cookieID: id }).write();
-    },
-    
-    async getCookie(id) {
-        return await database.get('users').find({ cookieID: id }).value();
     },
     
     async addUser(uuid, user, pass) {

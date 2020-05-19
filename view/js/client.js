@@ -22,7 +22,10 @@ async function login(username, password) {
         password: password
     }
 
-    const response = await fetch(url, { method: 'POST', body: JSON.stringify(obj), headers: { 'Content-Type': 'application/json' } });
+    const response = await fetch(url, { 
+        method: 'POST', 
+        body: JSON.stringify(obj), 
+        headers: { 'Content-Type': 'application/json' } });
     const data = await response.json();
 
     return await data;
