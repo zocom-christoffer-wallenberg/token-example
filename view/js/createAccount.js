@@ -54,6 +54,11 @@ function validate(password) {
         specialCharacter: false
     }
 
+    /*
+      Vi testar varje regel för sig för att öka läsbarheten och kunna
+      ge feedback till användaren om den inte uppfyller alla krav och berätta vilket krav som saknas.
+    */
+
     if (password.length >= 8) {
         console.log('Has length of at least 8 characters');
         validation.length = true;
@@ -87,6 +92,9 @@ function validate(password) {
         validation.specialCharacter = true;
         specialCharacterElem.innerHTML = 'Special character: check!';
     }
+
+    //Vi testar av hela regex på en rad istället. Nackdelen är att vi inte vet vilken regel som inte uppfyllts
+    //om det skulle vara fallet
 
     /*let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     console.log(password.match(regex));
