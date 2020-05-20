@@ -9,15 +9,20 @@
 <body>
     <main class="wrapper">
         <h1>Skapa konto</h1>
-        <section class="form-inputs">
+        <section class="form">
             <label for="username">Välj användarnamn</label>
-            <input type="text" id="username" class="form-input">
-        </section>
-        <section class="form-inputs">
+            <input type="text" id="username" class="input-field">
             <label for="pass">Välj lösenord</label>
-            <input type="password" id="pass" class="form-input">
+            <input type="password" id="pass" class="input-field">
         </section>
-        <button id="submit" class="form-button">Skapa konto</button>
+        <article>
+            <p id="length">Längd: </p>
+            <p id="lowercase">Lowercase: </p>
+            <p id="uppercase">Uppercase: </p>
+            <p id="number">Number: </p>
+            <p id="specialCharacter">Special character: </p>
+        </article>
+        <button id="submit" class="button">Skapa konto</button>
     </main>
 
     <script src="js/createAccount.js"></script>

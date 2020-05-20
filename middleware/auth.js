@@ -20,6 +20,7 @@ module.exports = {
             console.log('Before next function');
             next(); //Säger att express kan gå vidare till nästa parameter i endpoint:en
         } catch (error) {
+            //Fånga fel och returnera ett svar
             res.status(401).send(JSON.stringify({ success: false, error: 'Token not valid' }));
         }
     },

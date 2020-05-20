@@ -41,6 +41,12 @@
       "username": "chris",
       "password": "$2b$10$x1Gwdo4cM2jeWH7XA0Puw.vzconYEACGkCIWjZsJNyIW5pI.PWA7m",
       "role": "user"
+    },
+    {
+      "uuid": "8e5723b0-f6f8-4a71-a8d5-b7700a60aa4f",
+      "username": "chris",
+      "password": "$2b$10$NiOhQtdE/nk0jZ7gta7GPOjljez6GrwtRmjSKjsKWqAmvolVSoGgK",
+      "role": "user"
     }
   ]
 }
